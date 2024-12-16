@@ -1,0 +1,2 @@
+Best params for Model: {'classifier__max_depth': 10, 'classifier__min_samples_split': 10, 'classifier__n_estimators': 100}
+Best scoring(Accuracy) for Model: 0.80049550749329

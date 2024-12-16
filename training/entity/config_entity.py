@@ -9,7 +9,7 @@ class DataIngestionConfig:
     source: Path
     data_dir: Path
     STATUS_FILE: str
-#2
+
 @dataclass(frozen=True)
 class DataValidationConfig:
     root_dir: Path
@@ -17,15 +17,12 @@ class DataValidationConfig:
     all_schema: dict
     STATUS_FILE: str
 
-#3
 @dataclass(frozen=True)
-class FeatureEngineeringConfig:
+class FeatureExtractionConfig:
     root_dir: Path
-    final_train_data_path: Path
-    final_test_data_path: Path
+    data_dir: Path
     STATUS_FILE: str
 
-#4
 @dataclass(frozen=True)
 class CrossValConfig:
     root_dir: Path
@@ -36,9 +33,15 @@ class CrossValConfig:
     STATUS_FILE: str
 
 
+@dataclass(frozen=True)
+class FeatureEngineeringConfig:
+    root_dir: Path
+    data_dir: Path
+    final_train_data_path: Path
+    final_test_data_path: Path
+    STATUS_FILE: str
 
-#5
-# Changes will be made as per the model is configured
+
 @dataclass(frozen=True)
 class ModelTrainerConfig:
     root_dir: Path
@@ -47,11 +50,9 @@ class ModelTrainerConfig:
     best_model_params: Path
     STATUS_FILE: str
 
-    
-#6
 @dataclass(frozen=True)
 class ModelEvaluationConfig:
     root_dir: Path
-    test_data_path: Path
+    final_test_data_path: Path
     model_path: Path
     STATUS_FILE: str
