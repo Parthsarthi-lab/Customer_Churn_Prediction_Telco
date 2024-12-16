@@ -3,4 +3,8 @@ numpy
 matplotlib
 seaborn
 scikit-learn
+python-box
+ensure
+pyYAML
+Flask
 -e .
