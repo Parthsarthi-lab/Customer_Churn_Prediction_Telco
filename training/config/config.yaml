@@ -34,13 +34,13 @@ feature_engineering:
 
 model_trainer:
   root_dir: artifacts/model_trainer
-  final_train_data_path: artifacts/cross_val/data_for_final_train
-  final_test_data_path: artifacts/cross_val/data_for_final_train  
+  final_train_data_path: artifacts/feature_engineering
+  final_test_data_path: artifacts/feature_engineering  
   best_model_params: artifacts/cross_val/best_model_params
   STATUS_FILE: artifacts/model_trainer/status.txt
 
 model_evaluation:
   root_dir: artifacts/model_evaluation
-  final_test_data_path: artifacts/cross_val/data_for_final_train
+  final_test_data_path: artifacts/feature_engineering
   model_path: artifacts/model_trainer
   STATUS_FILE: artifacts/model_evaluation/status.txt

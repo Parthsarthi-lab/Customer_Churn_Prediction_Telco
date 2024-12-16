@@ -81,6 +81,7 @@ class FeatureEngineering:
             xtrain = transform_pipeline.transform(xtrain)
             xtest = transform_pipeline.transform(xtest)
 
+            #info_logger.info(xtrain[0])
             info_logger.info("Transformed Final Training Data")
 
             return xtrain, xtest, ytrain, ytest
@@ -94,6 +95,7 @@ class FeatureEngineering:
 
             final_transform_data_path = self.config.root_dir
             
+            #info_logger.info(xtrain[0])
             # Save xtrain and ytrain  to Train.npz
             # Save xtest and ytest to Test.npz
             np.savez(os.path.join(final_transform_data_path, 'Train.npz'), xtrain=xtrain, ytrain=ytrain)
