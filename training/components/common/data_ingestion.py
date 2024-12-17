@@ -26,7 +26,7 @@ class DataIngestion:
         try:
             info_logger.info("Data Ingestion Component started")
             status = False
-            data_file_path = os.path.join(self.config.data_dir, "advertising_data.csv")
+            data_file_path = os.path.join(self.config.data_dir, "Telco_Customer_Churn.csv")
 
             if not os.path.exists(data_file_path):
                 shutil.copy(self.config.source, self.config.data_dir)
