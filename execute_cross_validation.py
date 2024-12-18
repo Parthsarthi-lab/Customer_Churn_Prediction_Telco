@@ -23,7 +23,11 @@ obj = FeatureExtractionPipeline()
 obj.main()
 info_logger.info(f">>>>>>>> {PIPELINE} completed <<<<<<<<<")
 
-
+PIPELINE = "Feature Engineering Training Pipeline"
+info_logger.info(f">>>>> {PIPELINE} started <<<<")
+obj = FeatureExtractionPipeline()
+obj.main()
+info_logger.info(f">>>>>>>> {PIPELINE} completed <<<<<<<<<")
 
 PIPELINE = "Cross Validation Pipeline"
 info_logger.info(f">>>>> {PIPELINE} started <<<<")
