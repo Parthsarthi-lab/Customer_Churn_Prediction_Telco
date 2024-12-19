@@ -104,7 +104,7 @@ def test_data_ingestion_with_configuration_manager(mock_get_config, tmp_path):
     data_ingestion = DataIngestion(config=config)
 
     # Ensure the conifg object is correctly passed
-    assert data_ingestion.config == config
+    assert data_ingestion.config == "hello"
 
 
     
